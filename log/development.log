@@ -1,0 +1,867 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8702192330141180325)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8702192330141180325)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mAttendance Destroy (0.2ms)[0m  [1m[31mDELETE FROM "attendances"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "events"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Destroy (7.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ula@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ula@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ula@example.net"], ["encrypted_password", "$2a$12$6rn7dE8voh8rO.ayNhobzeqzs5hn8qi5SEn0ZCz0IMc8nUM/cFLOu"], ["description", "Quasi reprehenderit quia.Veritatis tempore quae.Inventore deserunt sunt."], ["first_name", "Marshall"], ["last_name", "Jones"], ["created_at", "2021-05-19 10:18:49.950555"], ["updated_at", "2021-05-19 10:18:49.950555"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.1ms)
+UserMailer#welcome_email: processed outbound mail in 101.9ms
+Sent mail to ula@example.net (14.5ms)
+Date: Wed, 19 May 2021 12:18:50 +0200
+From: mesas.cedric@gmail.com
+To: ula@example.net
+Message-ID: <60a4e60ae1da_57c036ec77059@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60ad628_57c036ec769fc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60ad628_57c036ec769fc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTWFyc2hhbGwgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09DQogDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIg
+ZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiB1bGFAZXhhbXBsZS5u
+ZXQuDQogDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50LCBj
+b25uZWN0ZS10b2kgdmlhIDogaHR0cDovL215ZnVja2luZ2V2ZW50YnJpdGUu
+Y29tLg0KIA0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_60a4e60ad628_57c036ec769fc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Marshall et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : ul=
+a@example.net.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60ad628_57c036ec769fc--
+
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jackson.hahn@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jackson.hahn@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jackson.hahn@example.com"], ["encrypted_password", "$2a$12$UNX4KXG/IgyEH4YMlJcp/.jQah3cN9Z0iw1gIL0dnKW7pFdrO6OOu"], ["description", "Temporibus qui vel.Blanditiis vel ratione.Nostrum quos voluptatem."], ["first_name", "Leif"], ["last_name", "Wiza"], ["created_at", "2021-05-19 10:18:50.244908"], ["updated_at", "2021-05-19 10:18:50.244908"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.0ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 4.3ms
+Sent mail to jackson.hahn@example.com (16.0ms)
+Date: Wed, 19 May 2021 12:18:50 +0200
+From: mesas.cedric@gmail.com
+To: jackson.hahn@example.com
+Message-ID: <60a4e60a3d44d_57c036ec772c1@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60a3ce6b_57c036ec7717b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60a3ce6b_57c036ec7717b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTGVpZiBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGphY2tzb24uaGFobkBleGFt
+cGxlLmNvbS4NCiANClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGll
+bnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbXlmdWNraW5nZXZlbnRi
+cml0ZS5jb20uDQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICEN
+Cg==
+
+----==_mimepart_60a4e60a3ce6b_57c036ec7717b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Leif et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : ja=
+ckson.hahn@example.com.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60a3ce6b_57c036ec7717b--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romelia@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romelia@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "romelia@example.net"], ["encrypted_password", "$2a$12$UMJrPzIPdW54uZhzN.zh1u5lxoTfvZMpfHR4HkUkyx7yjzZbyxyGe"], ["description", "Perferendis id reprehenderit.Quaerat voluptatibus in.Sed necessitatibus officia."], ["first_name", "Octavio"], ["last_name", "Osinski"], ["created_at", "2021-05-19 10:18:50.436533"], ["updated_at", "2021-05-19 10:18:50.436533"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 6.2ms
+Sent mail to romelia@example.net (19.8ms)
+Date: Wed, 19 May 2021 12:18:50 +0200
+From: mesas.cedric@gmail.com
+To: romelia@example.net
+Message-ID: <60a4e60a6c9d9_57c036ec774fc@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60a6c01c_57c036ec773d1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60a6c01c_57c036ec773d1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgT2N0YXZpbyBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBl
+biB1dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IHJvbWVsaWFAZXhhbXBs
+ZS5uZXQuDQogDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50
+LCBjb25uZWN0ZS10b2kgdmlhIDogaHR0cDovL215ZnVja2luZ2V2ZW50YnJp
+dGUuY29tLg0KIA0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_60a4e60a6c01c_57c036ec773d1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Octavio et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : ro=
+melia@example.net.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60a6c01c_57c036ec773d1--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lavina.sporer@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lavina.sporer@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "lavina.sporer@example.net"], ["encrypted_password", "$2a$12$K3AA/2yZWBpIJlJeXT7ice/WwmzmV9oUSJ4yLRTvXlz9FGFObeiMu"], ["description", "Nulla id voluptas.Rerum quia labore.Voluptatem dolor cum."], ["first_name", "Joycelyn"], ["last_name", "Krajcik"], ["created_at", "2021-05-19 10:18:50.633773"], ["updated_at", "2021-05-19 10:18:50.633773"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.0ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 4.7ms
+Sent mail to lavina.sporer@example.net (14.0ms)
+Date: Wed, 19 May 2021 12:18:50 +0200
+From: mesas.cedric@gmail.com
+To: lavina.sporer@example.net
+Message-ID: <60a4e60a9c54f_57c036ec776ce@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60a9bea1_57c036ec77574";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60a9bea1_57c036ec77574
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgSm95Y2VseW4gZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09DQogDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIg
+ZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiBsYXZpbmEuc3BvcmVy
+QGV4YW1wbGUubmV0Lg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNl
+IGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tpbmdl
+dmVudGJyaXRlLmNvbS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUu
+ZnIgIQ0K
+
+----==_mimepart_60a4e60a9bea1_57c036ec77574
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Joycelyn et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : la=
+vina.sporer@example.net.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60a9bea1_57c036ec77574--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vanda@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vanda@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "vanda@example.com"], ["encrypted_password", "$2a$12$BLQPGbQHmDjIVvZkk9mMauq0Ch4JD.qcfJlnONeMlj1P.Nq4bC9bS"], ["description", "Deleniti eaque similique.Aut pariatur est.Beatae facere dolore."], ["first_name", "Kate"], ["last_name", "Wisoky"], ["created_at", "2021-05-19 10:18:50.820483"], ["updated_at", "2021-05-19 10:18:50.820483"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 4.8ms
+Sent mail to vanda@example.com (15.7ms)
+Date: Wed, 19 May 2021 12:18:50 +0200
+From: mesas.cedric@gmail.com
+To: vanda@example.com
+Message-ID: <60a4e60ac9d78_57c036ec778ca@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60ac9800_57c036ec777c0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60ac9800_57c036ec777c0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgS2F0ZSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IHZhbmRhQGV4YW1wbGUuY29t
+Lg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwgY29u
+bmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tpbmdldmVudGJyaXRlLmNv
+bS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_60a4e60ac9800_57c036ec777c0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Kate et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : va=
+nda@example.com.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60ac9800_57c036ec777c0--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gilberto@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gilberto@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "gilberto@example.com"], ["encrypted_password", "$2a$12$QDuJBdvWjrckDOSAjsu5BeTcz6JtcA5zcQFDOf/7jYySBVYz6oOaO"], ["description", "Incidunt nihil occaecati.Sit voluptates est.Quo dolores exercitationem."], ["first_name", "Zula"], ["last_name", "Kirlin"], ["created_at", "2021-05-19 10:18:51.009205"], ["updated_at", "2021-05-19 10:18:51.009205"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 5.0ms
+Sent mail to gilberto@example.com (17.9ms)
+Date: Wed, 19 May 2021 12:18:51 +0200
+From: mesas.cedric@gmail.com
+To: gilberto@example.com
+Message-ID: <60a4e60b3e06_57c036ec78043@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60b38a2_57c036ec7797a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60b38a2_57c036ec7797a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgWnVsYSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGdpbGJlcnRvQGV4YW1wbGUu
+Y29tLg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwg
+Y29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tpbmdldmVudGJyaXRl
+LmNvbS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_60a4e60b38a2_57c036ec7797a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Zula et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : gi=
+lberto@example.com.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60b38a2_57c036ec7797a--
+
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sid@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sid@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sid@example.com"], ["encrypted_password", "$2a$12$./epFjJ5KeA/baMiImHOtOHkh9mifEh2vB2mtNkKReDLZVI5Yq.4i"], ["description", "Optio velit occaecati.Ex animi nihil.Facere neque sit."], ["first_name", "Marc"], ["last_name", "Gutmann"], ["created_at", "2021-05-19 10:18:51.202121"], ["updated_at", "2021-05-19 10:18:51.202121"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.0ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 5.3ms
+Sent mail to sid@example.com (16.2ms)
+Date: Wed, 19 May 2021 12:18:51 +0200
+From: mesas.cedric@gmail.com
+To: sid@example.com
+Message-ID: <60a4e60b331a7_57c036ec78246@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60b32afa_57c036ec781d2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60b32afa_57c036ec781d2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTWFyYyBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IHNpZEBleGFtcGxlLmNvbS4N
+CiANClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGllbnQsIGNvbm5l
+Y3RlLXRvaSB2aWEgOiBodHRwOi8vbXlmdWNraW5nZXZlbnRicml0ZS5jb20u
+DQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_60a4e60b32afa_57c036ec781d2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Marc et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : si=
+d@example.com.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60b32afa_57c036ec781d2--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeffery.wilkinson@example.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeffery.wilkinson@example.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeffery.wilkinson@example.org"], ["encrypted_password", "$2a$12$noh0CLJPvyDQRgVG6EsS2edzK.y.8FhHpoT5OacXwAIEQ.iP6b2BC"], ["description", "Quidem sed voluptas.Cumque nemo facilis.Deleniti natus provident."], ["first_name", "Carline"], ["last_name", "Smith"], ["created_at", "2021-05-19 10:18:51.392625"], ["updated_at", "2021-05-19 10:18:51.392625"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 6.7ms
+Sent mail to jeffery.wilkinson@example.org (15.5ms)
+Date: Wed, 19 May 2021 12:18:51 +0200
+From: mesas.cedric@gmail.com
+To: jeffery.wilkinson@example.org
+Message-ID: <60a4e60b61fb6_57c036ec7847b@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60b615d8_57c036ec783fe";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60b615d8_57c036ec783fe
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQ2FybGluZSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBl
+biB1dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGplZmZlcnkud2lsa2lu
+c29uQGV4YW1wbGUub3JnLg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNw
+YWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tp
+bmdldmVudGJyaXRlLmNvbS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNp
+dGUuZnIgIQ0K
+
+----==_mimepart_60a4e60b615d8_57c036ec783fe
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Carline et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : je=
+ffery.wilkinson@example.org.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60b615d8_57c036ec783fe--
+
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mario@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mario@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mario@example.com"], ["encrypted_password", "$2a$12$1NUj5iYz4saqCOoWq9Ce3uoRmpEJjPidjkqXgE/EunI4nXPysOAim"], ["description", "Fugiat est fugit.Et odit vitae.Magnam illum consequatur."], ["first_name", "Wade"], ["last_name", "Goldner"], ["created_at", "2021-05-19 10:18:51.585348"], ["updated_at", "2021-05-19 10:18:51.585348"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 6.0ms
+Sent mail to mario@example.com (15.0ms)
+Date: Wed, 19 May 2021 12:18:51 +0200
+From: mesas.cedric@gmail.com
+To: mario@example.com
+Message-ID: <60a4e60b90eeb_57c036ec786d8@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60b904dd_57c036ec785a0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60b904dd_57c036ec785a0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgV2FkZSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IG1hcmlvQGV4YW1wbGUuY29t
+Lg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwgY29u
+bmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tpbmdldmVudGJyaXRlLmNv
+bS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_60a4e60b904dd_57c036ec785a0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Wade et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : ma=
+rio@example.com.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60b904dd_57c036ec785a0--
+
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jenae@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jenae@example.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jenae@example.net"], ["encrypted_password", "$2a$12$hO0HqWjyK1bk6d3Z6g8ue.T.cswaSw.BwxQChjIr7C4Kg4iNkc79S"], ["description", "Cum sapiente accusamus.Sit sit magnam.Nam nesciunt omnis."], ["first_name", "Phil"], ["last_name", "Sanford"], ["created_at", "2021-05-19 10:18:51.775294"], ["updated_at", "2021-05-19 10:18:51.775294"]]
+  ↳ db/seeds.rb:16
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 5.3ms
+Sent mail to jenae@example.net (18.3ms)
+Date: Wed, 19 May 2021 12:18:51 +0200
+From: mesas.cedric@gmail.com
+To: jenae@example.net
+Message-ID: <60a4e60bbf350_57c036ec78876@sebastien-System-Product-Name.mail>
+Subject: =?UTF-8?Q?Bienvenue_=C3=A0_la_maison._Ici,_tout_est_doux_!?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60a4e60bbe84a_57c036ec78793";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60a4e60bbe84a_57c036ec78793
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgUGhpbCBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGplbmFlQGV4YW1wbGUubmV0
+Lg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwgY29u
+bmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9teWZ1Y2tpbmdldmVudGJyaXRlLmNv
+bS4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_60a4e60bbe84a_57c036ec78793
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+=0D
+    <body>=0D
+        <h1>Salut Phil et bienvenue chez nous !</h1>=0D
+    <p>=0D
+        Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : je=
+nae@example.net.=0D
+    </p>=0D
+    <p>=0D
+        Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : ht=
+tp://myfuckingeventbrite.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+    =0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60a4e60bbe84a_57c036ec78793--
+
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:32

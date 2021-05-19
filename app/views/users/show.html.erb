@@ -1,0 +1,49 @@
+<h1>Mon profil</h1>
+
+<div class="container">
+    <div class="card-body">
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                Email :<p><%=current_user.email%></p> 
+            </li>
+
+            <li class="list-group-item">
+                First name : <p><%=current_user.first_name%></p> 
+            </li>
+
+            <li class="list-group-item">
+                Last name : <p><%=current_user.last_name%></p> 
+            </li>
+
+            <li class="list-group-item">
+                Description : <p><%=current_user.description%></p> 
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="container">
+    <ul class="list-group">
+        <li class="">
+            <%=button_to 'Changer mon mot de passe', new_user_password_path(current_user.id), method: 'get', class: 'btn btn-danger'%>
+        </li>
+
+        <li class="">
+            <a href=<%=edit_user_registration_path%> class="btn btn-danger">Modifier mes infos</a>
+        </li>
+
+        <li class="">
+            <a href="#" class="btn btn-danger">Modifier ma description</a>
+        </li>
+
+        <li class="">
+            <a href="#" class="btn btn-danger">Modifier mon prénom</a>
+        </li>
+
+        <li class="">
+            <a href="#" class="btn btn-danger">Modifier mon nom</a>
+        </li>
+    </ul>
+</div>

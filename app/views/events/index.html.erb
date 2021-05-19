@@ -1,0 +1,26 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Hello, guy !</h1>
+            <p>Bienvenu sur le site My Fucking Eventbrite !</p>
+        </div>
+      </div>
+
+      <div class="container">
+      <% @events.each do |event| %>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+            
+                <h2><%= event.title %></h2>
+                <p><%= event.duration %></p>
+                <p><%= event.location %></p>
+                <p><a class="btn btn-secondary" href="#" role="button"><%= link_to "Show", event %>View details &raquo;</a></p>
+            </div>
+        </div>
+    <p id="notice"><%= notice %></p>
+                <p><%= link_to "Edit", edit_event_path(event) %></p>
+                <p><%= link_to "Destroy", event, method: :delete, data: { confirm: "Are you sure?" } %></p>
+        <% end %>
+<br>
+<%= link_to "New Event", new_event_path %>
